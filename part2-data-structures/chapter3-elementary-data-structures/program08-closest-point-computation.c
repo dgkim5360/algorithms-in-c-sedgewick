@@ -1,7 +1,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "program3-3-point-data-type-interface.h"
+#include "program03-point-data-type-interface.h"
 
 float randFloat() {
   return 1.0*rand()/RAND_MAX;

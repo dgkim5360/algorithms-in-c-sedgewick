@@ -1,19 +1,38 @@
 CC=gcc
 CCFLAGS=-lm
 
-program2: program2-types-of-numbers.c
+program02: program02-types-of-numbers.c
 	$(CC) -o $@ $< $(CCFLAGS)
-program5: program5-sieve-for-eratosthenes.c
+program05: program05-sieve-for-eratosthenes.c
 	$(CC) -o $@ $<
-program6: program6-dynamic-memory-allocation-for-array.c
+program06: program06-dynamic-memory-allocation-for-array.c
 	$(CC) -o $@ $<
-program7: program7-coin-flipping-simulation.c
+program07: program07-coin-flipping-simulation.c
 	$(CC) -o $@ $<
-program8: program8-closest-point-computation.c
-	$(CC) -o $@ $< program4-point-data-type-implementation.c $(CCFLAGS)
+program08: program08-closest-point-computation.c
+	$(CC) -o $@ $< program04-point-data-type-implementation.c $(CCFLAGS)
+program09: program09-circular-list-example-josephus-problem.c
+	$(CC) -o $@ $<
+program10: program10-list-reversal.c
+	$(CC) -o $@ $<
+program11: program11-list-insertion-sort.c
+	$(CC) -o $@ $<
+program13: program13-list-allocation-for-josephus.c
+	$(CC) -o $@ $< list.c
+
 exercise13: sieve.c
 	$(CC) -o $@ $@.c $<
+exercise24: linkedlist.c
+	$(CC) -o $@ $@.c $<
+exercise25: linkedlist.c
+	$(CC) -o $@ $@.c $<
+exercise26: linkedlist.c
+	$(CC) -o $@ $@.c $<
+exercise27: linkedlist.c
+	$(CC) -o $@ $@.c $<
+exercise34: list.c list-exercise.c
+	$(CC) -o $@ $@.c list.c list-exercise.c
 
 clean:
-	$(RM) program2 program5 program6 program7 program8
-	$(RM) exercise01 exercise11 exercise12 exercise13 exercise17
+	$(RM) program02 program05 program06 program07 program08 program09 program10 program11 program13
+	$(RM) exercise01 exercise11 exercise12 exercise13 exercise17 exercise24 exercise25 exercise26 exercise27 exercise28 exercise34
