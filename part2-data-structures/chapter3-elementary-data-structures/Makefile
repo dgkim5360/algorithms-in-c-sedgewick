@@ -21,6 +21,14 @@ program13: program13-list-allocation-for-josephus.c
 	$(CC) -o $@ $< list.c
 program15: program15-string-search.c
 	$(CC) -o $@ $<
+program16: program16-two-dimensional-array-allocation.c
+	$(CC) -o $@ $<
+program17: program17-sorting-an-array-of-strings.c
+	$(CC) -o $@ $<
+program18: program18-adjacency-matrix-graph-representation.c
+	$(CC) -o $@ $<
+program19: program19-adjacency-lists-graph-representation.c
+	$(CC) -o $@ $<
 
 exercise13: sieve.c
 	$(CC) -o $@ $@.c $<
@@ -36,5 +44,5 @@ exercise34: list.c list-exercise.c
 	$(CC) -o $@ $@.c list.c list-exercise.c
 
 clean:
-	$(RM) program02 program05 program06 program07 program08 program09 program10 program11 program13 program15
-	$(RM) exercise01 exercise11 exercise12 exercise13 exercise17 exercise24 exercise25 exercise26 exercise27 exercise28 exercise34 exercise56
+	$(RM) program02 program05 program06 program07 program08 program09 program10 program11 program13 program15 program16 program17 program18 program19
+	$(RM) exercise01 exercise11 exercise12 exercise13 exercise17 exercise24 exercise25 exercise26 exercise27 exercise28 exercise34 exercise56 exercise57 exercise59 exercise61
