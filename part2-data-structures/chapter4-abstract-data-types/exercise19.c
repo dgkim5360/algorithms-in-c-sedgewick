@@ -1,5 +1,8 @@
-/* Exercise 4.1: Give the contents of s[0], ..., s[4] after the execution of
- * the operations illustrated in Figure 4.1, using Program 4.4.
+/* Exercise 4.19: Suppose that you change the pushdown-stack interface to
+ * replace `test if empty` by `count`, which should return the number of items
+ * currently in the data structure. Provide implementations for `count` for
+ * the array representation (Program 4.4) and the linked-list representation
+ * (Program 4.5).
  */
 #include <stdio.h>
 #include "ItemChar.h"

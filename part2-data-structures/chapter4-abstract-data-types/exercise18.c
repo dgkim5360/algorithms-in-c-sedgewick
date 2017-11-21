@@ -1,4 +1,4 @@
-/* Exercise 4.1: Give the contents of s[0], ..., s[4] after the execution of
+/* Exercise 4.18: Give the contents of s[0], ..., s[4] after the execution of
  * the operations illustrated in Figure 4.1, using Program 4.4.
  */
 #include <stdio.h>
