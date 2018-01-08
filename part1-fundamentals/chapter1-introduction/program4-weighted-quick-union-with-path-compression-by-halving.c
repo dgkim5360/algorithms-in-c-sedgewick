@@ -1,10 +1,15 @@
+/* Program 1.4: Path compression by halving
+ * This program halves the length of any path that we traverse. The net result
+ * of this change is that the trees become almost completely flat after a long
+ * sequence of operations.
+ */
 #include <stdio.h>
 #define N 10000
 
 int main() {
     int i, j, p, q, id[N], sz[N];
 
-    for (i = 0; i < N; i++) {
+    for (i = 0; i < N; ++i) {
 	id[i] = i;
 	sz[i] = 1;
     }

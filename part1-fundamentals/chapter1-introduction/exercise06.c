@@ -36,7 +36,6 @@ void print_header(const int *id) {
 }
 
 void process_step(const int p, const int q, int *id, int *sz) {
-    int i;
     quickunion_weighted(p, q, id, sz);
     printf("%d %d\t", p, q);
     print_id(id);
