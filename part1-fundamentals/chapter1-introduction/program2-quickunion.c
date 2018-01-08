@@ -1,3 +1,15 @@
+/* Program 1.2: Quick-union solution to connectivity problem
+ * This program does less computation for the *union* operation
+ * at the expense of more computation for the *find* operation.
+ * The *for* loops and subsequent *if* statement in this code
+ * specify the necessary and sufficient conditions on the id array
+ * for p and q to be connected. The assignment statement id[i] = j
+ * implements the union operation.
+ *
+ * Property 1.2: For M > N, the quick-union algorithm could take
+ * more than MN/2 instructions to solve a connectivity problem
+ * with M pairs of N objects.
+ */
 #include <stdio.h>
 #define N 10000
 
