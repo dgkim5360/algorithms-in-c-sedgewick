@@ -1,8 +1,12 @@
 CC=gcc
 CFLAGS=-O2 -Wall -pedantic-errors
 
+# Section 1.1. Algorithms
+# Section 1.2. A Sample Problem: Connectivity
 run-exercise01: exercise01.md
 	cat $<
+
+# Section 1.3. Union-Find Algorithms
 run-figure03: figure03
 	./$<
 run-program01: program01
@@ -33,6 +37,10 @@ run-exercise16: exercise16
 	echo "3 4\n4 9\n8 0\n2 3\n5 6\n2 9\n5 9\n7 3\n4 8\n5 6\n0 2\n6 1\n" | ./$<
 run-exercise17: exercise17
 	./$<
+
+# Section 1.4. Perspective
+# Section 1.5. Summary of Topics
+
 
 figure03: figure03-quickfind-example.c
 	$(CC) $(CFLAGS) -o $@ $<
