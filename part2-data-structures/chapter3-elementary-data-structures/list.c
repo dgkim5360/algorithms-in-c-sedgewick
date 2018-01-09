@@ -1,3 +1,18 @@
+/* Program 3.14: Implementation of list-processing interface
+ * This program gives implementations of the functions declared in
+ * Program 3.12, and illustrates a standard approach to allocating
+ * memory for fixed-size nodes. We build a free list that is
+ * initialized to the maximum number of nodes that our program
+ * will use, all linked together. Then, when a client program
+ * allocates a node, we remove that node from the free list; when
+ * a client program frees a node, we link that node in to the free
+ * list.
+ *
+ * By convention, client program do not refer to list nodes except
+ * through function calls, and nodes returned to client programs
+ * have self-links. These conventions provide some measure of
+ * protection against referencing undefined pointers.
+ */
 #include <stdlib.h>
 #include "list.h"
 

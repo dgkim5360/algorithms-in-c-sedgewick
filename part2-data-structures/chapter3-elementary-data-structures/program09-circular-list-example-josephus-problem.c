@@ -1,3 +1,13 @@
+/* Program 3.9: Circular list example (Josephus problem)
+ * To represent people arranged in a circle, we build a circular
+ * linked list, with a link from each person to the person on the
+ * left in the circle. The integer `i` represents the `i`th person
+ * in the circle. After building a one-node circular list for 1,
+ * we insert 2 through N after that node, resulting in a circle
+ * with 1 through N, leaving `x` pointing to N. Then, we skip M-1
+ * nodes, beginning with 1, and set the link of the (M-1)st to
+ * skip the `M`st, continuing until only one node is left.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 

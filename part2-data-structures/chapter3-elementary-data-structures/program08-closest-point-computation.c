@@ -1,7 +1,17 @@
+/* Program 3.8: Closest-point computation
+ * This program illustrates the use of an array of structures, and
+ * is representative of the typical situation where we save items
+ * in an array to process them later, during some computation. It
+ * counts the number of pairs of N randomly generated points in
+ * the unit square that can be connected by a straight line of
+ * length than d, using the data type for points described in
+ * Section 3.1. The running time is O(N^2), so this program cannot
+ * be used for huge N. Program 3.20 provides a faster solution.
+ */
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "program03-point-data-type-interface.h"
+#include "Point.h"
 
 float randFloat() {
   return 1.0*rand()/RAND_MAX;

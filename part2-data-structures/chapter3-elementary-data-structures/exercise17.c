@@ -13,12 +13,12 @@ int main() {
   for (i = 0; i < N; ++i)
     arr[i] = 0;
 
-  while (scanf("%ld", &l)) {
+  while (scanf("%ld", &l) != EOF) {
     if (l < 1000 && !arr[l]) {
       ++cnt;
       arr[l] = 1;
     }
-    printf("count: %d\n", cnt);
+    printf("number: %ld\tcount: %d\n", l, cnt);
   }
   return 0;
 }

@@ -1,3 +1,7 @@
+/* Exercise 3.1: Find the largest and smallest numbers that you can represent
+ * with types `int`, `long int`, `short int`, `float` and `double` in your
+ * programming environment.
+ */
 #include <stdio.h>
 #include <limits.h>
 #include <float.h>

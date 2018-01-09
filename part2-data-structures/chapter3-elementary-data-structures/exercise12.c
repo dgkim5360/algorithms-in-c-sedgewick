@@ -30,7 +30,7 @@ void sieve_bool(bool *arr) {
 }
 
 int main() {
-  int i, j;
+  int i;
   char a[N];
   bool b[N];
 

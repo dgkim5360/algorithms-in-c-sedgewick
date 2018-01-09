@@ -1,6 +1,6 @@
-/* Given pointers x and t to nodes on a circular list, write a code fragment
- * that moves the node following t to the position following the node following
- * x on the list.
+/* Exercise 3.27: Given pointers x and t to nodes on a circular
+ * list, write a code fragment that moves the node following t to
+ * the position following the node following x on the list.
  */
 
 #include <stdio.h>

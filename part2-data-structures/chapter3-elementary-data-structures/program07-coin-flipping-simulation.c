@@ -1,3 +1,16 @@
+/* Program 3.7: Coin-flipping simulation
+ * If we flip a coin N times, we expect to get N/2 heads, but
+ * could get anywhere from 0 to N heads. This program runs the
+ * experiment M times, taking both N and M from the command line.
+ * It uses an array f to keep track of the frequency of occurrence
+ * of the outcome "i heads" for 0 <= i <= N, then prints out a
+ * histogram of the result of the experiments, with one asterisk
+ * for each 10 occurrences.
+ *
+ * The operation on which this program is based -- indexing an
+ * array with a computed value -- is critical to the efficiency of
+ * many computational prcedures.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 

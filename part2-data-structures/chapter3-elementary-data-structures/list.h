@@ -1,4 +1,4 @@
-/* Program3.12: List-processing interface
+/* Program 3.12: List-processing interface
  * This code, which might be kept in an interface file `list.h`, specifies the
  * types of nodes and links, and declares some of the operations that we might
  * want to perform on them. We declare our own functions for allocating and

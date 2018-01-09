@@ -1,3 +1,8 @@
+/* Program 3.13: List allocation for the Josephus problem
+ * This program for the Josephus problem is an example of a client
+ * program utilizing the list-processing primitives declared in
+ * Program 3.12 and implemented in Program 3.14.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include "list.h"
