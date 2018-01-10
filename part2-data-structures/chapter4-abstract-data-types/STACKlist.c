@@ -1,8 +1,12 @@
-/* Program 4.5: Linked-ist implementation of a pushdown stack
+/* Program 4.5: Linked-list implementation of a pushdown stack
  * This code implements the stack ADT as illustrated in
  * 4.5. It uses
  * an auxiliary function NEW to allocate the memory for a node, set its fields
  * from the function arguments, and return a link to the node.
+ *
+ * Property 4.1: We can implement the push and pop operations for
+ * the pushdown stack ADT in constant time, using either arrays or
+ * linked lists.
  */
 #include <stdio.h>
 #include <stdlib.h>

@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include "ItemChar.h"
 #include "STACK.h"
+#include "STACKARRAY.h"
 #define N 20
 
 int main() {

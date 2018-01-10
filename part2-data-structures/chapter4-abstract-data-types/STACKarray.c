@@ -6,10 +6,14 @@
  * number of items expected on the stack as the argument to STACKinit,
  * which allocates an array of that size, but this code does not check for
  * errors such as pushing onto a full stack (or popping an empty one).
+ *
+ * Property 4.1: We can implement the push and pop operations for
+ * the pushdown stack ADT in constant time, using either arrays or
+ * linked lists.
  */
 #include <stdio.h>
 #include <stdlib.h>
-#include "ItemInt.h"  // proper adjustment needed
+#include "ItemChar.h"
 #include "STACK.h"
 static Item *s;
 static int N;
