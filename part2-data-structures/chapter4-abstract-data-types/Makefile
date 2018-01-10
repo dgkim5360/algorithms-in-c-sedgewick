@@ -1,4 +1,4 @@
-CC=gcc -Wall --pedantic
+CC=gcc -Wall --pedantic-errors
 STACKARRAY=STACKarray.c
 STACKLIST=STACKlist.c
 UF=UF.c
@@ -8,6 +8,25 @@ COMPLEX=COMPLEX.c
 COMPLEXFIRSTCLASS=COMPLEXfirstclass.c
 QUEUELISTFIRSTCLASS=QUEUEfirstlist.c
 POLY=POLY.c
+
+# Section 4.1. Abstract Objects and Collections of Objects
+run-exercise01: exercise01.h
+	@cat $<
+run-exercise02: exercise02.h
+	@cat $<
+
+# Section 4.2. Pushdown Stack ADT
+run-program01: STACK.h
+	@cat $<
+run-exercise06: exercise06.md
+	@cat $<
+run-exercise07: exercise07.md
+	@cat $<
+
+# Section 4.3. Examples of Stack ADT Clients
+run-program02: program02
+	./$<-array "5 9 8 + 4 6 * * 7 + *"
+
 
 program02: program02-postfix-expression-evaluation.c
 	$(CC) -o $@-array $< $(STACKARRAY)
