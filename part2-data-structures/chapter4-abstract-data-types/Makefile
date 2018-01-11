@@ -58,6 +58,17 @@ run-exercise21: exercise21
 	@echo "========================================="
 	./$<
 
+# Section 4.5. Creation of a New ADT
+run-program06: UF.h
+	@cat $<
+run-program07: program07
+	echo "3 4\n4 9\n8 0\n2 3\n5 6\n2 9\n5 9\n7 3\n4 8\n5 6\n0 2\n6 1\n" | ./$< 10
+run-program08: UF.c
+	@cat $<
+run-exercise26: exercise26
+	./$<
+run-exercise29: exercise29
+	echo "3 4\n4 9\n8 0\n2 3\n5 6\n2 9\n5 9\n7 3\n4 8\n5 6\n0 2\n6 1\n" | ./$< 10
 
 
 program02: program02-postfix-expression-evaluation.c

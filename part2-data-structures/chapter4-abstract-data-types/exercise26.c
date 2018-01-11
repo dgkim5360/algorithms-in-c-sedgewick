@@ -4,6 +4,8 @@
 #include "UF.h"
 #define N 10
 
+int *UFid();
+
 void print_id(const int *id) {
     int i;
     
