@@ -70,6 +70,33 @@ run-exercise26: exercise26
 run-exercise29: exercise29
 	echo "3 4\n4 9\n8 0\n2 3\n5 6\n2 9\n5 9\n7 3\n4 8\n5 6\n0 2\n6 1\n" | ./$< 10
 
+# Section 4.6. FIFO Queues and Generalized Queues
+run-program09: QUEUE.h
+	@cat $<
+run-program10: QUEUElist.c
+	@cat $<
+run-program11: QUEUEarray.c
+	@cat $<
+run-exercise30: exercise30
+	echo "FIRS*T*IN***FI*RS***T*OUT*****" | ./$<
+run-exercise31: exercise31.md
+	@cat $<
+run-exercise34: exercise34.md
+	@cat $<
+run-exercise37: DEQUE.h
+	@cat $<
+run-exercise38: DEQUEarray.c
+	@cat $<
+run-exercise41: exercise41
+	./$< "EAs+Y+QUE**+st+*+IO*n++*"
+
+# Section 4.7. Duplicate and Index Items
+run-program12: STACKunqiue.c
+	@cat $<
+run-exercise47: exercise47.md
+	@cat $<
+
+# Section 4.8. First-Class ADTs
 
 program02: program02-postfix-expression-evaluation.c
 	$(CC) -o $@ $< $(STACKARRAY)
@@ -101,7 +128,9 @@ exercise29:
 	$(CC) -o $@ program07-equivalence-relations-adt-client.c $@.c
 exercise30:
 	$(CC) -o $@ $@.c $(QUEUEARRAY)
+exercise41:
+	$(CC) -o $@ $@.c DEQUEarray.c
 
 clean:
 	$(RM) program02 program03 program07 program13 program17 program19
-	$(RM) exercise18 exercise19-array exercise19-list exercise20 exercise21 exercise26 exercise29 exercise30
+	$(RM) exercise18 exercise19-array exercise19-list exercise20 exercise21 exercise26 exercise29 exercise30 exercise41

@@ -8,6 +8,9 @@
  * to the new node. The functions QUEUEget, QUEUEinit, and QUEUEempty
  * are all identical to their counterparts for the linked-list pushdown-stack
  * implementation of Program 4.5.
+ *
+ * Property 4.2: We can implement the get and put operations for the FIFO queue
+ * ADT in constant time, using either arrays or linked lists.
  */
 #include <stdlib.h>
 #include "ItemChar.h"

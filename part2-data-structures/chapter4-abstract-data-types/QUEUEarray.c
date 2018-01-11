@@ -7,6 +7,9 @@
  * but we make the size of the array 1 greater than the maximum number
  * of elements that the client expects to see in the queue, so that we could
  * augment this program to make such checks.
+ *
+ * Property 4.2: We can implement the get and put operations for the FIFO queue
+ * ADT in constant time, using either arrays or linked lists.
  */
 #include <stdlib.h>
 #include "ItemChar.h"

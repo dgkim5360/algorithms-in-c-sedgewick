@@ -7,6 +7,8 @@
 #include "QUEUE.h"
 #define N 10
 
+Item QUEUEget_by_index(int);
+
 int main() {
   Item c;
 
