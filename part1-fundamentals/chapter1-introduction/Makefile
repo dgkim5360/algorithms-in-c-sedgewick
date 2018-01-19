@@ -56,6 +56,8 @@ program04: program4-weighted-quick-union-with-path-compression-by-halving.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 clean:
-	$(RM) figure03 figure06
-	$(RM) program01 program02 program03 program04
-	$(RM) exercise04 exercise05 exercise06 exercise07 exercise08 exercise14 exercise15 exercise16 exercise17
+	@echo "Cleaning all executable binaries..."
+	@$(RM) figure03 figure06
+	@$(RM) program01 program02 program03 program04
+	@$(RM) exercise04 exercise05 exercise06 exercise07 exercise08 exercise14 exercise15 exercise16 exercise17
+	@echo "Done."

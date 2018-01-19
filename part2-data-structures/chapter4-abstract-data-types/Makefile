@@ -167,5 +167,7 @@ exercise41:
 	$(CC) -o $@ $@.c DEQUEarray.c
 
 clean:
-	$(RM) program02 program03 program07 program13 program17 program19 program21
-	$(RM) exercise18 exercise19-array exercise19-list exercise20 exercise21 exercise26 exercise29 exercise30 exercise41
+	@echo "Cleaning all executable binaries..."
+	@$(RM) program02 program03 program07 program13 program17 program19 program21
+	@$(RM) exercise18 exercise19-array exercise19-list exercise20 exercise21 exercise26 exercise29 exercise30 exercise41
+	@echo "Done."

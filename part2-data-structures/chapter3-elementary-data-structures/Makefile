@@ -169,5 +169,7 @@ exercise34: list.c
 	$(CC) $(CFLAGS) -o $@ $@.c $<
 
 clean:
-	$(RM) program01 program02 program05 program06 program07 program08 program09 program10 program11 program13 program15 program16 program17 program18 program19
-	$(RM) exercise01 exercise02 exercise03 exercise05 exercise07 exercise11 exercise12 exercise13 exercise17 exercise20 exercise21 exercise24 exercise25 exercise26 exercise27 exercise28 exercise34 exercise56 exercise57 exercise59 exercise61
+	@echo "Cleaning all executable binaries..."
+	@$(RM) program01 program02 program05 program06 program07 program08 program09 program10 program11 program13 program15 program16 program17 program18 program19
+	@$(RM) exercise01 exercise02 exercise03 exercise05 exercise07 exercise11 exercise12 exercise13 exercise17 exercise20 exercise21 exercise24 exercise25 exercise26 exercise27 exercise28 exercise34 exercise56 exercise57 exercise59 exercise61
+	@echo "Done."
