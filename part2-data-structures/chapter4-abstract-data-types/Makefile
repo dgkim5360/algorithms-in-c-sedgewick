@@ -97,6 +97,33 @@ run-exercise47: exercise47.md
 	@cat $<
 
 # Section 4.8. First-Class ADTs
+run-program13: program13
+	./$< 8
+run-program14: COMPLEX.h
+	@cat $<
+run-program15: COMPLEX.c
+	@cat $<
+run-program16: COMPLEXfirstclass.h
+	@cat $<
+run-program17: COMPLEXfirstclass.c
+	@cat $<
+run-program18: QUEUEfirstclass.h
+	@cat $<
+run-program19: program19
+	./$< 84
+run-program20: QUEUEfirstlist.c
+	@cat $<
+run-exercise57: COMPLEXfirstclass.h
+	@tail $< -n 5
+	@tail $(COMPLEXFIRSTCLASS) -n 8
+run-exercise64: program13
+	@./$< 2
+	@./$< 3
+	@./$< 4
+	@./$< 5
+	@./$< 6
+	@./$< 7
+	@./$< 8
 
 program02: program02-postfix-expression-evaluation.c
 	$(CC) -o $@ $< $(STACKARRAY)

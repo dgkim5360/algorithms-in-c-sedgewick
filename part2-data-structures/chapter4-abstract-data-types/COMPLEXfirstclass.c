@@ -30,3 +30,11 @@ Complex COMPLEXmult(Complex a, Complex b) {
   return COMPLEXinit(Re(a)*Re(b) - Im(a)*Im(b),
                      Re(a)*Im(b) + Im(a)*Re(b));
 }
+
+/* Exercise 4.57: Add a function COMPLEXadd to the ADT
+ * for complex numbers in the text (Programs 4.16 and
+ * 4.17).
+ */
+Complex COMPLEXadd(Complex a, Complex b) {
+  return COMPLEXinit(Re(a)+Re(b), Im(a)+Im(b));
+}

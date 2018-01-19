@@ -8,3 +8,9 @@ Complex COMPLEXinit(float, float);
 float Re(Complex);
 float Im(Complex);
 Complex COMPLEXmult(Complex, Complex);
+
+/* Exercise 4.57: Add a function COMPLEXadd to the ADT
+ * for complex numbers in the text (Programs 4.16 and
+ * 4.17).
+ */
+Complex COMPLEXadd(Complex, Complex);

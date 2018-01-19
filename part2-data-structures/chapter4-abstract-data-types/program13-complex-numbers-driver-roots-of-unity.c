@@ -4,11 +4,15 @@
  * declaring variables of type `Complex` and using them as arguments and return
  * values of functions. This program checks the ADT implemetation by computing
  * the powers of the roots of unity. It prints the table shown in Figure 4.12.
+ *
+ * Definition 4.4: A **first-class data type** is one for which we can have
+ * potentially many different instances, and which we can assign to variables
+ * which we can declare to hold the instances.
  */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "COMPLEXfirstclass.h"  // COMPLEX.h for program13
+#include "COMPLEX.h"
 #define PI 3.141592625
 
 int main(int argc, char *argv[]) {
