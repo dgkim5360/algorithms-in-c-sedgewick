@@ -10,7 +10,6 @@
 void push_max(Node);
 
 int main() {
-  int i;
   Node t, x, start;
 
   initNodes(N);
