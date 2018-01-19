@@ -15,10 +15,10 @@
  * for each search on the average.
  */
 int search(int arr[], int v, int l, int r) {
-    int i;
+	int i;
 
-    for (i = l; i <= r; ++i)
+	for (i = l; i <= r; ++i)
 	if (v == arr[i])
-	    return i;
-    return -1;
+		return i;
+	return -1;
 }

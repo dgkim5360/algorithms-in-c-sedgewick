@@ -41,7 +41,7 @@ run-exercise17: exercise17
 # Section 1.4. Perspective
 # Section 1.5. Summary of Topics
 
-
+# ===
 figure03: figure03-quickfind-example.c
 	$(CC) $(CFLAGS) -o $@ $<
 figure06: figure06-quickunion-example.c
