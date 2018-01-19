@@ -6,12 +6,23 @@
  * ADT operation to destroy objects (and to free the associated memory) might
  * be needed for some applications.
  */
+#include <stdio.h>
 #include <stdlib.h>
 #include "POLY.h"
 struct poly {
   int N;
   int *a;
 };
+
+void showPOLY(Poly poly) {
+  int i;
+
+  printf("%d ", poly->a[0]);
+  for (i = 1; i < poly->N; ++i) {
+    printf("+ %dx^%d ", poly->a[i], i);
+  }
+  printf("\n");
+}
 
 Poly POLYterm(int coeff, int exp) {
   int i;
@@ -28,7 +39,7 @@ Poly POLYadd(Poly p, Poly q) {
   int i;
   Poly t;
 
-  if (p->N < p->N) {
+  if (p->N < q->N) {
     t = p;
     p = q;
     q = t;

@@ -125,6 +125,14 @@ run-exercise64: program13
 	@./$< 7
 	@./$< 8
 
+# Section 4.9. Application-Based ADT Example
+run-program21: program21
+	./$< 8 .05
+run-program22: POLY.h
+	@cat $<
+run-program23: POLY.c
+	@cat $<
+
 program02: program02-postfix-expression-evaluation.c
 	$(CC) -o $@ $< $(STACKARRAY)
 program03: program03-infix-to-postfix-conversion.c
@@ -159,5 +167,5 @@ exercise41:
 	$(CC) -o $@ $@.c DEQUEarray.c
 
 clean:
-	$(RM) program02 program03 program07 program13 program17 program19
+	$(RM) program02 program03 program07 program13 program17 program19 program21
 	$(RM) exercise18 exercise19-array exercise19-list exercise20 exercise21 exercise26 exercise29 exercise30 exercise41

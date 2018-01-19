@@ -15,10 +15,10 @@ int main(int argc, char *argv[]) {
   Poly t, x;
   int i;
 
-
   printf("Binomial coefficients\n");
   t = POLYadd(POLYterm(1, 1), POLYterm(1, 0));
-  for (i = 0, x = t; i < N; ++i) {
+  showPOLY(t);
+  for (i = 0, x = t; i < N-1; ++i) {
     x = POLYmult(t, x);
     showPOLY(x);
   }
