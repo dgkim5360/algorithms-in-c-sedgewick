@@ -3,6 +3,7 @@
  * recursive method for finding greatest common divisors of two integers.
  */
 #include <stdio.h>
+#include <stdlib.h>
 
 int gcd(int m, int n) {
   if (n == 0)
@@ -10,8 +11,9 @@ int gcd(int m, int n) {
   return gcd(n, m%n);
 }
 
-int main() {
-  int result = gcd(314159, 271828);
-  printf("%d\n", result);
+int main(int argc, char *argv[]) {
+  int m = atoi(argv[1]), n = atoi(argv[2]),
+      result = gcd(m, n);
+  printf("GCD of %d and %d: %d\n", m, n, result);
   return 0;
 }

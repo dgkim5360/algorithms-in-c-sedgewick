@@ -16,6 +16,6 @@ int main(int argc, char *argv[]) {
   int input = atoi(argv[1]);
 
   printf("input: %d\n", input);
-  printf("log(N!) = %f\n", logfactorial(input));
+  printf("log(%d!) = %f\n", input, logfactorial(input));
   return 0;
 }

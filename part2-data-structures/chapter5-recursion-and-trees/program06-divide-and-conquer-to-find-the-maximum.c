@@ -6,6 +6,10 @@
  * is defined. If the file size is even, the two parts are equal in size; if
  * the file size is odd, the size of the first part is 1 greater than the size
  * of the second part.
+ *
+ * Property 5.1: A recursive function that divide a problem of size
+ * N into two independent (nonempty) parts that is solves recursively
+ * calls itself less than N times
  */
 Item max(Item a[], int l, int r) {
   Item u, v;
