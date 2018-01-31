@@ -22,6 +22,8 @@ run-exercise02: exercise02
 	./exercise02 1000000 997
 run-exercise05: exercise05
 	./$< 314159 271828
+run-exercise06: exercise06
+	./$< 89 55
 
 # Section 5.2. Divide and Conquer
 run-program06: program06-divide-and-conquer-to-find-the-maximum.c
@@ -45,5 +47,5 @@ exercise01: exercise01.c
 clean:
 	@echo "Cleaning all executable binaries..."
 	@$(RM) program03 program04
-	@$(RM) exercise01 exercise02 exercise05
+	@$(RM) exercise01 exercise02 exercise05 exercise06
 	@echo "Done."
