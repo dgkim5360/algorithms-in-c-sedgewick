@@ -36,6 +36,8 @@ run-program08: program08-divide-and-conquer-to-draw-a-ruler.c
 	@cat $<
 run-program09: program09-nonrecursive-program-to-draw-a-ruler.c
 	@cat $<
+run-exercise16: exercise16
+	./$< 1 2 3 4 5 6 7 8 9 44234
 
 
 program03: program03-euclid-algorithm.c
@@ -49,5 +51,5 @@ exercise01: exercise01.c
 clean:
 	@echo "Cleaning all executable binaries..."
 	@$(RM) program03 program04
-	@$(RM) exercise01 exercise02 exercise05 exercise06 exercise08
+	@$(RM) exercise01 exercise02 exercise05 exercise06 exercise08 exercise16
 	@echo "Done."
