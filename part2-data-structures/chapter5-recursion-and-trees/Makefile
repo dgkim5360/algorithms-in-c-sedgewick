@@ -42,6 +42,8 @@ run-exercise16: exercise16
 # Section 5.3. Dynamic Programming
 run-program10: program10-fibonacci-numbers-recursive.c
 	@cat $<
+run-program11: program11-fibonacci-numbers-dp.c
+	@cat $<
 
 
 program03: program03-euclid-algorithm.c
