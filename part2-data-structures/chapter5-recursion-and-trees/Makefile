@@ -44,6 +44,10 @@ run-program10: program10-fibonacci-numbers-recursive.c
 	@cat $<
 run-program11: program11-fibonacci-numbers-dp.c
 	@cat $<
+run-program12: program12-knapsack-problem-recursive.c
+	@cat $<
+run-program13: program13-knapsack-problem-dp.c
+	@cat $<
 
 
 program03: program03-euclid-algorithm.c
