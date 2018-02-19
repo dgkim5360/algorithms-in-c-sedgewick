@@ -39,6 +39,10 @@ run-program09: program09-nonrecursive-program-to-draw-a-ruler.c
 run-exercise16: exercise16
 	./$< 1 2 3 4 5 6 7 8 9 44234
 
+# Section 5.3. Dynamic Programming
+run-program10: program10-fibonacci-numbers-recursive.c
+	@cat $<
+
 
 program03: program03-euclid-algorithm.c
 	$(CC) -o $@ $<
