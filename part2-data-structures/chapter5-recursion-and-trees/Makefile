@@ -48,6 +48,10 @@ run-program12: program12-knapsack-problem-recursive.c
 	@cat $<
 run-program13: program13-knapsack-problem-dp.c
 	@cat $<
+run-exercise40: exercise40
+	./$<
+run-exercise41: exercise41
+	./$<
 
 
 program03: program03-euclid-algorithm.c
@@ -57,9 +61,13 @@ program04: program04-recursive-program-to-evaluate-prefix-expressions.c
 
 exercise01: exercise01.c
 	$(CC) -o $@ $< -lm
+exercise40: exercise40.c
+	$(CC) -o $@ $< -lm
+exercise41: exercise41.c
+	$(CC) -o $@ $< -lm
 
 clean:
 	@echo "Cleaning all executable binaries..."
 	@$(RM) program03 program04
-	@$(RM) exercise01 exercise02 exercise05 exercise06 exercise08 exercise16
+	@$(RM) exercise01 exercise02 exercise05 exercise06 exercise08 exercise16 exercise40 exercise41
 	@echo "Done."
