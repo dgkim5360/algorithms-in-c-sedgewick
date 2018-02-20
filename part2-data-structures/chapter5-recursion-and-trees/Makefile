@@ -52,6 +52,10 @@ run-exercise40: exercise40
 	./$<
 run-exercise41: exercise41
 	./$<
+run-exercise44: exercise44
+	./$< 20
+run-exercise45: exercise45
+	./$< 20
 
 
 program03: program03-euclid-algorithm.c
@@ -69,5 +73,5 @@ exercise41: exercise41.c
 clean:
 	@echo "Cleaning all executable binaries..."
 	@$(RM) program03 program04
-	@$(RM) exercise01 exercise02 exercise05 exercise06 exercise08 exercise16 exercise40 exercise41
+	@$(RM) exercise01 exercise02 exercise05 exercise06 exercise08 exercise16 exercise40 exercise41 exercise44 exercise45
 	@echo "Done."
