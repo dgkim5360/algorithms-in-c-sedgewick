@@ -59,6 +59,9 @@ run-exercise45: exercise45
 run-exercise55: exercise55
 	./$< 10 4
 
+# Section 5.4. Trees
+run-exercise63: exercise63.md
+	@cat $<
 
 program03: program03-euclid-algorithm.c
 	$(CC) -o $@ $<
