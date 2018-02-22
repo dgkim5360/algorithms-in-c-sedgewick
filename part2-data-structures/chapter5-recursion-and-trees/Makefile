@@ -63,6 +63,15 @@ run-exercise55: exercise55
 run-exercise63: exercise63.md
 	@cat $<
 
+# Section 5.5. Mathematical Properties of Binary Trees
+# Section 5.6. Tree Traversal
+run-program14: program14-recursive-tree-traversal.c
+	@cat $<
+run-program15: program15-preorder-traversal-nonrecursive.c
+	@cat $<
+run-program16: program16-level-order-traversal.c
+	@cat $<
+
 program03: program03-euclid-algorithm.c
 	$(CC) -o $@ $<
 program04: program04-recursive-program-to-evaluate-prefix-expressions.c
