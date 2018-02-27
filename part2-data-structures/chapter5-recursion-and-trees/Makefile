@@ -72,6 +72,16 @@ run-program15: program15-preorder-traversal-nonrecursive.c
 run-program16: program16-level-order-traversal.c
 	@cat $<
 
+# Section 5.7. Recursive Binary-Tree Algorithms
+run-program17: program17-computation-of-tree-parameters.c
+	@cat $<
+run-program18: program18-quick-tree-print-function.c
+	@cat $<
+run-program19: program19-construction-of-a-tournament.c
+	@cat $<
+run-program20: program20-construction-of-a-parse-tree.c
+	@cat $<
+
 program03: program03-euclid-algorithm.c
 	$(CC) -o $@ $<
 program04: program04-recursive-program-to-evaluate-prefix-expressions.c
