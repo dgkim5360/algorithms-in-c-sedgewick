@@ -82,6 +82,12 @@ run-program19: program19-construction-of-a-tournament.c
 run-program20: program20-construction-of-a-parse-tree.c
 	@cat $<
 
+# Section 5.8. Graph Traversal
+run-program21: program21-depth-first-search.c
+	@cat $<
+run-program22: program22-breadth-first-search.c
+	@cat $<
+
 program03: program03-euclid-algorithm.c
 	$(CC) -o $@ $<
 program04: program04-recursive-program-to-evaluate-prefix-expressions.c
