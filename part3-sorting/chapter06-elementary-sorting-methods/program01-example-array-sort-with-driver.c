@@ -16,6 +16,10 @@
  * We implement `Item` for integers (as needed by `main`) with `typedef`
  * and simple macros in this code. Use of other data types is the topic
  * of Section 6.7, and does not affect `sort`.
+ *
+ * Definition 6.1: A sorting method is said to be __stable__ if it
+ * preserves the relative order of items with duplicated keys in the
+ * file.
  */
 #include <stdio.h>
 #include <stdlib.h>
