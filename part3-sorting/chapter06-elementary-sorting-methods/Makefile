@@ -30,7 +30,14 @@ run-exercise11: exercise11.md
 program02: program02-selection-sort.c
 	$(CC) -o $@ $<
 
+# Section 6.3. Insertion Sort
+run-program03: program03
+	./$< 20 1
+
+program03: program03-insertion-sort.c
+	$(CC) -o $@ $<
+
 clean:
 	@echo "Cleaning all executable binaries..."
-	@$(RM) program01 program02
+	@$(RM) program01 program02 program03
 	@echo "Done."
