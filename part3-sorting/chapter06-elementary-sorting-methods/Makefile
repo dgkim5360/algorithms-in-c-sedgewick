@@ -24,6 +24,9 @@ program01: program01-example-array-sort-with-driver.c
 run-program02: program02
 	./$< 20 1
 
+run-exercise11: exercise11.md
+	@cat $<
+
 program02: program02-selection-sort.c
 	$(CC) -o $@ $<
 
