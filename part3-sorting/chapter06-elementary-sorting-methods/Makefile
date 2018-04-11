@@ -34,10 +34,17 @@ program02: program02-selection-sort.c
 run-program03: program03
 	./$< 20 1
 
+run-exercise15: exercise15.md
+	@cat $<
+
+run-exercise16: exercise16
+	./$< 20 1
+
 program03: program03-insertion-sort.c
 	$(CC) -o $@ $<
 
 clean:
 	@echo "Cleaning all executable binaries..."
 	@$(RM) program01 program02 program03
+	@$(RM) exercise16
 	@echo "Done."
