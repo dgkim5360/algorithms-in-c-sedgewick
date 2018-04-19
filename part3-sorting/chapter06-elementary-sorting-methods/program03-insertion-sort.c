@@ -12,6 +12,18 @@
  * position to the right elements in the sorted list a[l], ..., a[i-1]
  * that are larger than a[i], then putting a[i] into its proper
  * position.
+ *
+ * Property 6.2: Insertion sort uses about N^2/4 comparisons and
+ *   N^2/4 half-exchanges (moves) on the average, and twice that many
+ *   at worst.
+ *
+ * Property 6.4: Insertion sort and bubble sort use a linear number of
+ *   comparisons and exchanges for files with at most a constant number
+ *   of inversions corresponding to each element.
+ *
+ * Property 6.5: Insertion sort uses a linear number of comparisons and
+ *   exchanges for files with at most a constant number of elements
+ *   having more than a constant number of corresponding inversions.
  */
 #include <stdio.h>
 #include <stdlib.h>

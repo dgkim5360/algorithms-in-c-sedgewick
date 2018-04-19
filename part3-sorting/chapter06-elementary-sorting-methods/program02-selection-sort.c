@@ -10,6 +10,12 @@
  *   of order already in the file.
  *   i.e. it does not try to keep the existing order.
  * Powerful when: Sorting files with huge items and small keys.
+ *
+ * Property 6.1: Selection sort uses about N^2/2 comparisons and
+ *   N exchanges.
+ *
+ * Property 6.6: Selection sort runs in linear time for files with large
+ *   items and small keys.
  */
 #include <stdio.h>
 #include <stdlib.h>

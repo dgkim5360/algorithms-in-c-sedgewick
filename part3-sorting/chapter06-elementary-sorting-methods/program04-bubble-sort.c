@@ -6,6 +6,13 @@
  * the beginning. As in selection sort, as the index i travels from left
  * to right through the file, the elements to its left are in their
  * final position in the array.
+ *
+ * Property 6.3: Bubble sort uses about N^2/2 comparisons and
+ *   N^2/2 exchanges on the average and in the worst case.
+ *
+ * Property 6.4: Insertion sort and bubble sort use a linear number of
+ *   comparisons and exchanges for files with at most a constant number
+ *   of inversions corresponding to each element.
  */
 #include <stdio.h>
 #include <stdlib.h>
