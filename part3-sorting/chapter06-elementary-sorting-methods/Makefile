@@ -47,6 +47,9 @@ program03: program03-insertion-sort.c
 run-program04: program04
 	./$< 20 1
 
+run-exercise20: exercise20.md
+	@cat $<
+
 program04: program04-bubble-sort.c
 	$(CC) -o $@ $<
 
