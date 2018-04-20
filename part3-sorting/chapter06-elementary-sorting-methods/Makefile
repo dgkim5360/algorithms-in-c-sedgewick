@@ -53,9 +53,15 @@ run-exercise20: exercise20.md
 program04: program04-bubble-sort.c
 	$(CC) -o $@ $<
 
+# Section 6.5. Shellsort
+run-program05: program05
+	./$< 20 1
+
+program05: program05-shellsort.c
+	$(CC) -o $@ $<
 
 clean:
 	@echo "Cleaning all executable binaries..."
-	@$(RM) program01 program02 program03 program04
+	@$(RM) program01 program02 program03 program04 program05
 	@$(RM) exercise16
 	@echo "Done."
