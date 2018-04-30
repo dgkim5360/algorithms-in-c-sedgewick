@@ -53,7 +53,7 @@ run-exercise20: exercise20.md
 program04: program04-bubble-sort.c
 	$(CC) -o $@ $<
 
-# Section 6.5. Shellsort
+# Section 6.6. Shellsort
 run-program05: program05
 	./$< 20 1
 
