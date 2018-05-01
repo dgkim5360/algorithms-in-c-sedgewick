@@ -17,8 +17,8 @@ run-exercise05: exercise05.md
 run-exercise06: exercise06.md
 	@cat $<
 
-program01: program01-example-array-sort-with-driver.c
-	$(CC) -o $@ $<
+program01: program01-example-array-sort-with-driver.c program01-insertion-sort.c
+	$(CC) -o $@ program01-example-array-sort-with-driver.c program01-insertion-sort.c
 
 # Section 6.2. Selection Sort
 run-program02: program02
@@ -27,8 +27,8 @@ run-program02: program02
 run-exercise11: exercise11.md
 	@cat $<
 
-program02: program02-selection-sort.c
-	$(CC) -o $@ $<
+program02: program01-example-array-sort-with-driver.c program02-selection-sort.c
+	$(CC) -o $@ program01-example-array-sort-with-driver.c program02-selection-sort.c
 
 # Section 6.3. Insertion Sort
 run-program03: program03
@@ -40,8 +40,8 @@ run-exercise15: exercise15.md
 run-exercise16: exercise16
 	./$< 20 1
 
-program03: program03-insertion-sort.c
-	$(CC) -o $@ $<
+program03: program01-example-array-sort-with-driver.c program03-insertion-sort.c
+	$(CC) -o $@ program01-example-array-sort-with-driver.c program03-insertion-sort.c
 
 # Section 6.4. Bubble Sort
 run-program04: program04
@@ -50,15 +50,16 @@ run-program04: program04
 run-exercise20: exercise20.md
 	@cat $<
 
-program04: program04-bubble-sort.c
-	$(CC) -o $@ $<
+program04: program01-example-array-sort-with-driver.c program04-bubble-sort.c
+	$(CC) -o $@ program01-example-array-sort-with-driver.c program04-bubble-sort.c
 
 # Section 6.6. Shellsort
 run-program05: program05
 	./$< 20 1
 
-program05: program05-shellsort.c
-	$(CC) -o $@ $<
+program05: program01-example-array-sort-with-driver.c program05-shellsort.c
+	$(CC) -o $@ program01-example-array-sort-with-driver.c program05-shellsort.c
+
 
 clean:
 	@echo "Cleaning all executable binaries..."
