@@ -60,9 +60,55 @@ run-program05: program05
 program05: program01-example-array-sort-with-driver.c program05-shellsort.c
 	$(CC) -o $@ program01-example-array-sort-with-driver.c program05-shellsort.c
 
+# Section 6.7. Sorting of Other Types of Data
+run-program06: program06-sort-driver-for-arrays.c
+	@cat $<
+
+run-program07: program07-interface-for-array-data-type.h
+	@cat $<
+
+run-program08: program08-implementation-of-array-data-type.c
+	@cat $<
+
+run-program09: program09-sample-interface-for-item-data-type.h
+	@cat $<
+
+run-program10: program10-sample-implementation-for-item-data-type.c
+	@cat $<
+
+run-section-6: program-double-selection program-double-insertion program-double-bubble program-double-shellsort
+	@echo "Selection sort for double data type"
+	./program-double-selection 20 1
+	@echo "Insertion sort for double data type"
+	./program-double-insertion 20 1
+	@echo "Bubble sort for double data type"
+	./program-double-bubble 20 1
+	@echo "Shellsort for double data type"
+	./program-double-shellsort 20 1
+
+program-double-selection: program06-sort-driver-for-arrays.c program07-interface-for-array-data-type.h program08-implementation-of-array-data-type.c program09-sample-interface-for-item-data-type.h program10-sample-implementation-for-item-data-type.c selection-sort.c
+	@cp program07-interface-for-array-data-type.h Array.h
+	@cp program09-sample-interface-for-item-data-type.h Item.h
+	$(CC) -o $@ program06-sort-driver-for-arrays.c program08-implementation-of-array-data-type.c program10-sample-implementation-for-item-data-type.c selection-sort.c
+
+program-double-insertion: program06-sort-driver-for-arrays.c program07-interface-for-array-data-type.h program08-implementation-of-array-data-type.c program09-sample-interface-for-item-data-type.h program10-sample-implementation-for-item-data-type.c insertion-sort.c
+	@cp program07-interface-for-array-data-type.h Array.h
+	@cp program09-sample-interface-for-item-data-type.h Item.h
+	$(CC) -o $@ program06-sort-driver-for-arrays.c program08-implementation-of-array-data-type.c program10-sample-implementation-for-item-data-type.c insertion-sort.c
+
+program-double-bubble: program06-sort-driver-for-arrays.c program07-interface-for-array-data-type.h program08-implementation-of-array-data-type.c program09-sample-interface-for-item-data-type.h program10-sample-implementation-for-item-data-type.c bubble-sort.c
+	@cp program07-interface-for-array-data-type.h Array.h
+	@cp program09-sample-interface-for-item-data-type.h Item.h
+	$(CC) -o $@ program06-sort-driver-for-arrays.c program08-implementation-of-array-data-type.c program10-sample-implementation-for-item-data-type.c bubble-sort.c
+
+program-double-shellsort: program06-sort-driver-for-arrays.c program07-interface-for-array-data-type.h program08-implementation-of-array-data-type.c program09-sample-interface-for-item-data-type.h program10-sample-implementation-for-item-data-type.c shellsort.c
+	@cp program07-interface-for-array-data-type.h Array.h
+	@cp program09-sample-interface-for-item-data-type.h Item.h
+	$(CC) -o $@ program06-sort-driver-for-arrays.c program08-implementation-of-array-data-type.c program10-sample-implementation-for-item-data-type.c shellsort.c
 
 clean:
 	@echo "Cleaning all executable binaries..."
-	@$(RM) program01 program02 program03 program04 program05
+	@$(RM) program01 program02 program03 program04 program05 program-double-selection program-double-insertion program-double-bubble program-double-shellsort
 	@$(RM) exercise16
+	@$(RM) Array.h Item.h
 	@echo "Done."
