@@ -86,6 +86,19 @@ run-section-6: program-double-selection program-double-insertion program-double-
 	@echo "Shellsort for double data type"
 	./program-double-shellsort 20 1
 
+run-exercise49: exercise49-long-selection exercise49-long-insertion exercise49-long-bubble exercise49-long-shellsort
+	@echo "Selection sort for long data type"
+	./exercise49-long-selection 20 1
+	@echo "Insertion sort for long data type"
+	./exercise49-long-insertion 20 1
+	@echo "Bubble sort for long data type"
+	./exercise49-long-bubble 20 1
+	@echo "Shellsort for long data type"
+	./exercise49-long-shellsort 20 1
+
+run-exercise52: exercise52
+	./$< 20 1
+
 program-double-selection: program06-sort-driver-for-arrays.c program07-interface-for-array-data-type.h program08-implementation-of-array-data-type.c program09-sample-interface-for-item-data-type.h program10-sample-implementation-for-item-data-type.c selection-sort.c
 	@cp program07-interface-for-array-data-type.h Array.h
 	@cp program09-sample-interface-for-item-data-type.h Item.h
@@ -106,9 +119,34 @@ program-double-shellsort: program06-sort-driver-for-arrays.c program07-interface
 	@cp program09-sample-interface-for-item-data-type.h Item.h
 	$(CC) -o $@ program06-sort-driver-for-arrays.c program08-implementation-of-array-data-type.c program10-sample-implementation-for-item-data-type.c shellsort.c
 
+exercise49-long-selection: program06-sort-driver-for-arrays.c program07-interface-for-array-data-type.h program08-implementation-of-array-data-type.c exercise49-long-int.h exercise49-long-int.c selection-sort.c
+	@cp program07-interface-for-array-data-type.h Array.h
+	@cp exercise49-long-int.h Item.h
+	$(CC) -o $@ program06-sort-driver-for-arrays.c program08-implementation-of-array-data-type.c exercise49-long-int.c selection-sort.c
+
+exercise49-long-insertion: program06-sort-driver-for-arrays.c program07-interface-for-array-data-type.h program08-implementation-of-array-data-type.c exercise49-long-int.h exercise49-long-int.c insertion-sort.c
+	@cp program07-interface-for-array-data-type.h Array.h
+	@cp exercise49-long-int.h Item.h
+	$(CC) -o $@ program06-sort-driver-for-arrays.c program08-implementation-of-array-data-type.c exercise49-long-int.c insertion-sort.c
+
+exercise49-long-bubble: program06-sort-driver-for-arrays.c program07-interface-for-array-data-type.h program08-implementation-of-array-data-type.c exercise49-long-int.h exercise49-long-int.c bubble-sort.c
+	@cp program07-interface-for-array-data-type.h Array.h
+	@cp exercise49-long-int.h Item.h
+	$(CC) -o $@ program06-sort-driver-for-arrays.c program08-implementation-of-array-data-type.c exercise49-long-int.c bubble-sort.c
+
+exercise49-long-shellsort: program06-sort-driver-for-arrays.c program07-interface-for-array-data-type.h program08-implementation-of-array-data-type.c exercise49-long-int.h exercise49-long-int.c shellsort.c
+	@cp program07-interface-for-array-data-type.h Array.h
+	@cp exercise49-long-int.h Item.h
+	$(CC) -o $@ program06-sort-driver-for-arrays.c program08-implementation-of-array-data-type.c exercise49-long-int.c shellsort.c
+
+exercise52: program06-sort-driver-for-arrays.c exercise52-check.h exercise52-check.c program09-sample-interface-for-item-data-type.h program10-sample-implementation-for-item-data-type.c shellsort.c
+	@cp exercise52-check.h Array.h
+	@cp program09-sample-interface-for-item-data-type.h Item.h
+	$(CC) -o $@ program06-sort-driver-for-arrays.c exercise52-check.c program10-sample-implementation-for-item-data-type.c shellsort.c
+
 clean:
 	@echo "Cleaning all executable binaries..."
 	@$(RM) program01 program02 program03 program04 program05 program-double-selection program-double-insertion program-double-bubble program-double-shellsort
-	@$(RM) exercise16
+	@$(RM) exercise16 exercise49-long-selection exercise49-long-insertion exercise49-long-bubble exercise49-long-shellsort exercise52
 	@$(RM) Array.h Item.h
 	@echo "Done."
