@@ -144,9 +144,18 @@ exercise52: program06-sort-driver-for-arrays.c exercise52-check.h exercise52-che
 	@cp program09-sample-interface-for-item-data-type.h Item.h
 	$(CC) -o $@ program06-sort-driver-for-arrays.c exercise52-check.c program10-sample-implementation-for-item-data-type.c shellsort.c
 
+# Section 6.8. Index and Pointer Sorting
+run-exercise57: exercise57
+	./$< 6 0 < records.txt
+
+exercise57: program06-sort-driver-for-arrays.c program07-interface-for-array-data-type.h program08-implementation-of-array-data-type.c program12-data-type-interface-for-record-items.h program13-data-type-implementation-for-record-items.c program13-less.c
+	@cp program07-interface-for-array-data-type.h Array.h
+	@cp program12-data-type-interface-for-record-items.h Item.h
+	$(CC) -o $@ program06-sort-driver-for-arrays.c program08-implementation-of-array-data-type.c program13-data-type-implementation-for-record-items.c program13-less.c
+
 clean:
 	@echo "Cleaning all executable binaries..."
 	@$(RM) program01 program02 program03 program04 program05 program-double-selection program-double-insertion program-double-bubble program-double-shellsort
-	@$(RM) exercise16 exercise49-long-selection exercise49-long-insertion exercise49-long-bubble exercise49-long-shellsort exercise52
+	@$(RM) exercise16 exercise49-long-selection exercise49-long-insertion exercise49-long-bubble exercise49-long-shellsort exercise52 exercise57
 	@$(RM) Array.h Item.h
 	@echo "Done."
